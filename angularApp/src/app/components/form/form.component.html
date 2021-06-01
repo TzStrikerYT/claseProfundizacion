@@ -1,0 +1,77 @@
+<div class="d-flex justify-content-center">
+  <div class="card col-md-6">
+    <div class="card-header">Formulario</div>
+    <div class="card-body">
+      <form class="p-4" #formBar="ngForm" (ngSubmit)="validar(formBar)">
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Nombre</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            ngModel
+          />
+        </div>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label">Edad</label>
+          <input
+            type="number"
+            class="form-control"
+            id="age"
+            name="age"
+            ngModel
+          />
+        </div>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Genero</label
+          >
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="gender"
+            id="gender"
+            ngModel
+          >
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Pago Cover?</label
+          >
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="payCover"
+            id="payCover"
+            ngModel
+          >
+            <option value="true">Si</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Hora Entrada</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="hour"
+            name="hour"
+            min="1"
+            max="24"
+            ngModel
+          />
+
+          <button type="submit" class="btn btn-primary mt-3">Validar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
